@@ -1,0 +1,71 @@
+
+// Program: Disas Forex Software
+// Developer: Forex Robot Easy Team
+// Developer's Site: forexroboteasy.com
+
+// Import necessary libraries
+#include <Trade\Trade.mqh>
+
+// Define constants for trade functions
+#define BUY 0
+#define SELL 1
+
+// Define variables for trade functions
+double lotSize;
+double takeProfit;
+double stopLoss;
+
+// Function to place a buy order
+void placeBuyOrder(double lotSize, double takeProfit, double stopLoss)
+{
+    // Place buy order code here
+    Print('Buy order placed with lot size: ', lotSize);
+    Print('Take Profit set at: ', takeProfit);
+    Print('Stop Loss set at: ', stopLoss);
+}
+
+// Function to place a sell order
+void placeSellOrder(double lotSize, double takeProfit, double stopLoss)
+{
+    // Place sell order code here
+    Print('Sell order placed with lot size: ', lotSize);
+    Print('Take Profit set at: ', takeProfit);
+    Print('Stop Loss set at: ', stopLoss);
+}
+
+// Function to set the lot size
+void setLotSize(double size)
+{
+    // Set lot size code here
+    lotSize = size;
+    Print('Lot size set to: ', lotSize);
+}
+
+// Function to set the take profit
+void setTakeProfit(double profit)
+{
+    // Set take profit code here
+    takeProfit = profit;
+    Print('Take Profit set to: ', takeProfit);
+}
+
+// Function to set the stop loss
+void setStopLoss(double loss)
+{
+    // Set stop loss code here
+    stopLoss = loss;
+    Print('Stop Loss set to: ', stopLoss);
+}
+
+// Main function to execute the trade functions
+void OnStart()
+{
+    // Set lot size, take profit and stop loss
+    setLotSize(0.01);
+    setTakeProfit(50);
+    setStopLoss(30);
+
+    // Place buy and sell orders
+    placeBuyOrder(lotSize, takeProfit, stopLoss);
+    placeSellOrder(lotSize, takeProfit, stopLoss);
+}
